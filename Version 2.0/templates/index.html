@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>FokA - AI Assignment Helper</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="{{ url_for('static', filename='images/main_logo_white.png') }}" id="mainLOGO" alt="FokA Logo">
+        <h2 class="slogan">Because Googling Answers Is too Much WORK!</h2>
+    </nav>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Content -->
+        <div class="content">
+            <h1>Get Your Assignments <br>Done with <br>FokA AI</h1>
+            <p>Upload your assignment files, and let our <br>AI do the work for you. <br>Fast, accurate, and hassle-free!</p>
+        </div>
+
+        <!-- Combined Form and File Info Section -->
+        <div class="upload-container">
+            <form id="upload-form" action="/" method="POST" enctype="multipart/form-data">
+                <div id="drop-area">
+                    <!-- Upload Icon -->
+                    <img src="{{ url_for('static', filename='images/upload-icon.png') }}" alt="Upload Icon" class="upload-icon">
+                    <!-- Text -->
+                    <p>Drop files here to upload</p>
+                    <label for="main_file" class="upload-btn">Upload File</label>
+                    <input type="file" id="main_file" name="file" class="inputfile" multiple>
+                    <!-- Placeholder for the success message -->
+                    <p id="success-message" style="color: green;">{{ message }}</p>
+                </div>
+            </form>
+
+            <!-- File Info Section -->
+            <div class="file-info">
+                <div class="file-info-item">
+                    <span class="title">PDF only</span>
+                    <button class="file-types-btn">File types</button>
+                </div>
+                <div class="divider"></div>
+                <div class="file-info-item">
+                    <span class="title">5 Pages</span>
+                    <span class="description">Max Page Size</span>
+                </div>
+                <div class="divider"></div>
+                <div class="file-info-item">
+                    <span class="title">5 MB</span>
+                    <span class="description">Max File Size</span>
+                </div>
+                <div class="divider"></div>
+                <div class="file-info-item">
+                    <span class="title">10 per day</span>
+                    <span class="description">Total daily limit</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Link to the JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
