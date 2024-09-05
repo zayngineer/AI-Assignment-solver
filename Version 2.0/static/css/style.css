@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Six+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nerko+One&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nerko+One&family=Outfit:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem 5%;
+    background-color: black;
+    border-bottom: 1px solid #513c28;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+}
+
+.slogan {
+    color: white;
+    font-size: 20px;
+    font-family: "Caveat", cursive;
+    margin: 0 auto; /* This centers the slogan horizontally */
+    text-align: center; /* Ensures the text is centered within its container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainLOGO {
+    width: 80px;
+    height: 80px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 30 0 300px; /* Adjust this width as needed */
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+    background-color: #333; /* Darken on hover */
+}
+
+.upload-btn:active {
+    background-color: #000; /* Reset to original color on click */
+}
+
+/* UPLOAD FILE BUTTON ENDS HERE */
+
+/* BLACK BORDER */
+.container {
+    margin-top: 100px; /* Pushes the form down below the navbar */
+    margin-left: 80px;
+    background-color: white;
+    border: 4px solid black; /* Solid border to apply custom dashed pattern */
+    border-radius: 15px; /* Rounded corners */
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 90%;
+    height: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    /* Custom Dashed Border */
+    border-image: linear-gradient(to right, black 20%, rgba(255, 255, 255, 0) 20%) 1 round;
+}
+
+/* BLACK BORDER ENDS */
+
+.content h1 {
+    font-size: 60px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500px;
+    line-height: 0.9; /* Adjust the value to control line spacing */
+}
+
+.content p {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+}
+
+/* DRAG AND DROP */
+
+/* Styles for the Upload Icon */
+.upload-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 130px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#drop-area p {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #666;
+}
+
+#drop-area:hover {
+    background-color: #e9e9e9;
+}
+
+#drop-area.dragover {
+    background-color: #d9d9d9;
+    border-color: #333;
+}
+
+/* DRAG AND DROP ENDS HERE */
+
+/* 4 LISTS */
+
+.file-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.file-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.description, .file-types-btn {
+    font-size: 14px;
+    color: #666;
+}
+
+.file-types-btn {
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.file-types-btn:hover {
+    background-color: #d0d0d0;
+}
+
+.divider {
+    height: 40px;
+    width: 1px;
+    background-color: #e0e0e0;
+    margin: 0 10px;
+}
+
+/* 4 LISTS END HERE */
+
+#success-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
